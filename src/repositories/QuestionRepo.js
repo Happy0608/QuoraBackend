@@ -32,7 +32,8 @@ class QuestionService{
             const deletequestion=await Question.deleteOne({id:data.id});
             return deletequestion;
         } catch (error) {
-            
+            console.log(error);
+            throw error;
         }
     }
 }
